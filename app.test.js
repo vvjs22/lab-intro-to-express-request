@@ -53,7 +53,7 @@ describe("app", () => {
     it("sends the Pokemon when the name exactly matches", async () => {
       const response = await request(app).get(`/pokemon/search?name=${pokemon[0].name}`);
 
-      expect(JSON.parse(response.text)).toEqual([pokemon[0]]);
+      expect(JSON.parse(response.text)).toEqual(pokemon[0]);
     });
 
     it("sends the Pokemon when the name matches ignoring case", async () => {
@@ -61,7 +61,7 @@ describe("app", () => {
         `/pokemon/search?name=${pokemon[0].name.toUpperCase()}`
       );
 
-      expect(JSON.parse(response.text)).toEqual([pokemon[0]]);
+      expect(JSON.parse(response.text)).toEqual(pokemon[0]);
     });
   });
 
