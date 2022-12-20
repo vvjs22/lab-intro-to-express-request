@@ -12,5 +12,13 @@ app.get("/:verb/:adjective/:noun", (req, res) => {
     );
   });
   
+  // 99 Little Bugs In the Code
+  app.get("/bugs", (req, res) => {
+    res.send(
+      `<h1>99 little bugs in the code</h1> <a href="/bugs/101">Pull one down, patch it around</a>`
+    );
+  });
+
+  
 
 
